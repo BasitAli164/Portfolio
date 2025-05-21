@@ -1,5 +1,5 @@
 import Image from "next/image";
-import myImage from "@/assets/basit.jpg";
+import myImage from "@/assets/Basit.jpg"
 import { infoList, toolsDataLight } from "@/assets/assest";
 
 export const metadata={
