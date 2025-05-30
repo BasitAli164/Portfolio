@@ -15,7 +15,7 @@ const Footer = () => {
         </Link>
         <div className="w-max flex items-center gap-2 mx-auto">
           <Image src={mailIcon} alt="Mail-Icon" className="w-6" />
-          opoali911@gmail.com
+          basitdeveloper911@gmail.com
         </div>
       </div>
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
