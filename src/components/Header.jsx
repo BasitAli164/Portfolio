@@ -13,11 +13,11 @@ const Header = () => {
   const phoneIcon=<FontAwesomeIcon icon={faPhone}/>
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 mb-48 md:mb-[70px] lg:mb-0 ">
-      <div className="mt-44 sm:mt-20">
+      <div className="mt-44 sm:mt-20 ">
         <Image
           src={profileImage}
           alt="Profile-Image"
-          className="rounded-full w-20 "
+          className="rounded-full w-24 h-24 "
         />
       </div>
       <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
