@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profileImage from "../assets/img.jpg";
+import profileImage from "../assets/Basit.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHand, faDownload,faPhone } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
