@@ -25,7 +25,7 @@ export const PROJECTS = [
       "Building the full backend architecture — API design, database schema, and AI-powered trend analysis pipeline.",
     description:
       "Centralized social media management platform with trend analysis, campaign suggestions, and AI-assisted content generation.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "LLM APIs"],
+    technologies: ["Next.js", "Express js","Node.js", "MongoDB", "LLM APIs"],
     github: "[ADD IN ADMIN]",
     demo: "[ADD IN ADMIN]",
     accent: "primary",
