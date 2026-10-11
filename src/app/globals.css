@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   BASIT ALI — PORTFOLIO DESIGN TOKENS
+   Tailwind v4 + Shadcn UI (Base UI + Vega preset)
+   
+   6 Core Colors:
+   - Background, Surface, Primary Text, Muted Text, AI Accent, Secondary Accent
+   ========================================================================== */
+
+@theme inline {
+
+ 
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, "Courier New", monospace;
+  --font-jetbrains: var(--font-jetbrains), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  /* ... baaki tokens ... */
+
+  /* --- Shadcn token mapping (Tailwind reads these) --- */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* --- Charts (agar admin mein charts use karein) --- */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* --- Sidebar (admin dashboard ke liye) --- */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* --- Custom portfolio tokens --- */
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-ai: var(--ai);
+  --color-ai-foreground: var(--ai-foreground);
+  --color-emerald-accent: var(--emerald-accent);
+  --color-emerald-accent-foreground: var(--emerald-accent-foreground);
+
+  /* --- Border radius (Vega preset: rounded-lg) --- */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  
+}
+
+/* ==========================================================================
+   LIGHT THEME — Warm Pearl White
+   ========================================================================== */
+:root {
+  --radius: 0.625rem; /* 10px — Vega preset default */
+
+  /* === Core 6 tokens (Light) === */
+  --background: #FBF9F6;         /* Warm Pearl White — main page background */
+  --surface: #F4F0EA;            /* Card / navbar / panel background */
+  --foreground: #1E293B;         /* Primary text — headings */
+  --muted-foreground: #64748B;   /* Muted text — subtitles, dates */
+  --ai: #2563EB;                 /* Royal Tech Blue — AI accents, active links */
+  --emerald-accent: #10B981;     /* Emerald — verified, security, success */
+
+  /* === Derived tokens (Light) === */
+  --elevated: #F0EBE3;           /* Slightly differentiated — popovers, modals */
+  --border: #E5DFD5;             /* Subtle warm neutral border */
+  --input: #E5DFD5;              /* Input outlines */
+  --ring: #2563EB;               /* Focus ring — matches AI accent */
+
+  /* === Shadcn token aliases (map to core tokens) === */
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--elevated);
+  --popover-foreground: var(--foreground);
+  --primary: var(--ai);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--surface);
+  --accent: var(--emerald-accent);
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --ai-foreground: #FFFFFF;
+  --emerald-accent-foreground: #FFFFFF;
+
+  /* === Charts (Light) === */
+  --chart-1: #2563EB;
+  --chart-2: #10B981;
+  --chart-3: #64748B;
+  --chart-4: #8B5CF6;
+  --chart-5: #F59E0B;
+
+  /* === Sidebar (Light) — admin dashboard === */
+  --sidebar: #F4F0EA;
+  --sidebar-foreground: #1E293B;
+  --sidebar-primary: #2563EB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0EBE3;
+  --sidebar-accent-foreground: #1E293B;
+  --sidebar-border: #E5DFD5;
+  --sidebar-ring: #2563EB;
+}
+
+/* ==========================================================================
+   DARK THEME — Deep Obsidian
+   ========================================================================== */
+.dark {
+  /* === Core 6 tokens (Dark) === */
+  --background: #0B0F19;         /* Deep Obsidian — main page background */
+  --surface: #161F30;            /* Card / navbar / panel background */
+  --foreground: #F3F4F6;         /* Primary text */
+  --muted-foreground: #94A3B8;   /* Muted text */
+  --ai: #38BDF8;                 /* Cyber Cyan — AI accents */
+  --emerald-accent: #34D399;     /* Mint Green — verified, success */
+
+  /* === Derived tokens (Dark) === */
+  --elevated: #1C2739;           /* Slightly elevated — popovers, modals */
+  --border: #253044;             /* Subtle dark border */
+  --input: #253044;
+  --ring: #38BDF8;
+
+  /* === Shadcn token aliases (Dark) === */
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--elevated);
+  --popover-foreground: var(--foreground);
+  --primary: var(--ai);
+  --primary-foreground: #0B0F19;
+  --secondary: var(--surface);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--surface);
+  --accent: var(--emerald-accent);
+  --accent-foreground: #0B0F19;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --ai-foreground: #0B0F19;
+  --emerald-accent-foreground: #0B0F19;
+
+  /* === Charts (Dark) === */
+  --chart-1: #38BDF8;
+  --chart-2: #34D399;
+  --chart-3: #94A3B8;
+  --chart-4: #A78BFA;
+  --chart-5: #FBBF24;
+
+  /* === Sidebar (Dark) === */
+  --sidebar: #161F30;
+  --sidebar-foreground: #F3F4F6;
+  --sidebar-primary: #38BDF8;
+  --sidebar-primary-foreground: #0B0F19;
+  --sidebar-accent: #1C2739;
+  --sidebar-accent-foreground: #F3F4F6;
+  --sidebar-border: #253044;
+  --sidebar-ring: #38BDF8;
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
