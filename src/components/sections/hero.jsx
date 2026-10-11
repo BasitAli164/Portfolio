@@ -315,7 +315,7 @@ export function Hero() {
 
                 <div className="relative aspect-square overflow-hidden rounded-full border-2 border-border bg-surface shadow-2xl">
                   <Image
-                    src="/profile.jpg"
+                    src="/profile.JPG"
                     alt={PROFILE.name}
                     fill
                     sizes="320px"
