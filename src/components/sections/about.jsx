@@ -1,7 +1,6 @@
 import { ArrowUpRight, Sparkles, Terminal, Code2, Brain, Rocket } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import Link from "next/link";
-import { PROFILE } from "@/lib/constants";
 
 /* ═══════════════════════════════════════════════════════════
    About Section — Editorial / Terminal aesthetic
@@ -19,14 +18,14 @@ const CHAPTERS = [
     number: "02",
     icon: Code2,
     title: "Building Systems",
-    body: "Through my internship at NetBots and independent projects, I've learned to ship real software — from database schema to deployed UI. I've worked on web applications involving debugging, testing, and the kind of deployment details that only show up in production.",
+    body: "Through my job at NetBots and internship at AKRSP, I've learned to ship real software — from database schema to deployed Project. I've worked on web applications involving debugging, testing, and the kind of deployment details that only show up in production.",
     accent: "emerald-accent",
   },
   {
     number: "03",
     icon: Brain,
     title: "The AI Turn",
-    body: "My focus shifted toward Generative AI — not as a trend, but as a fundamental shift in how software will be built. I've worked with LLM APIs, prompt engineering, RAG architectures, and Hugging Face models. Hackathons like SignPulseAI and HeatShield AI gave me the space to build fast and learn faster.",
+    body: "My focus shifted toward Generative AI — not as a trend, but as a fundamental shift in how software will be built. I've worked with LLM APIs, prompt engineering, RAG architectures, and Hugging Face models. Hackathons like FortyGaurd and AI Factory  gave me the space to build fast and learn faster.",
     accent: "primary",
   },
   {
@@ -214,7 +213,7 @@ export function About() {
                     Focus Areas
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
-                    {["GenAI", "LLMs", "RAG", "Next.js", "MongoDB"].map(
+                    {["AI", "ML", "DL","NLP","CV","GenAI", "LLM",].map(
                       (item) => (
                         <span
                           key={item}

@@ -21,7 +21,7 @@ function LinkedinIcon({ className }) {
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const featuredLinks = NAV_LINKS.filter((link) =>
-    ["#about", "#projects", "#research", "#contact"].includes(link.href)
+    ["/education", "/skills", "/hackathons", "/teaching","/experience","/achievements","/problem-solving"].includes(link.href)
   );
 
   return (
@@ -39,11 +39,7 @@ export function Footer() {
 
       <Container className="py-12 sm:py-16">
         {/* ─── Top: Colophon header ─── */}
-        <div className="flex items-center justify-between border-b border-border pb-4 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-          <span>Colophon</span>
-          <span className="hidden sm:inline">Chapter End</span>
-          <span>№ {currentYear}</span>
-        </div>
+       
 
         {/* ─── Main grid: 3 columns ─── */}
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-8">

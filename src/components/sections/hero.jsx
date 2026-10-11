@@ -280,7 +280,7 @@ export function Hero() {
 
           {/* MASSIVE SERIF NAME — CENTERED */}
           <div className="relative mt-10 text-center sm:mt-14 lg:mt-16">
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-start gap-3">
               <span className="h-px w-10 bg-primary" />
               <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
                 Portfolio
@@ -289,7 +289,7 @@ export function Hero() {
 
             <h1 className="mt-4 font-serif text-[3.5rem] font-normal leading-[0.82] tracking-[-0.03em] text-foreground sm:text-[5.5rem] lg:text-[8rem] xl:text-[9.5rem]">
               <span className="block">Basit</span>
-              <span className="block">
+              <span className="block mt-3">
                 <span className="text-primary italic">Ali</span>
                 <span className="text-emerald-accent">.</span>
               </span>

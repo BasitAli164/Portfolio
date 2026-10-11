@@ -18,7 +18,13 @@ export const PROFILE = {
     github: "https://github.com/BasitAli164", // [ADD IN ADMIN]
     linkedin: "https://www.linkedin.com/in/basit-ali-abdupa/", // [ADD IN ADMIN]
     huggingface: "https://huggingface.co/BasitAliii", // [ADD IN ADMIN]
+    streamlite: "",
+    googleScholar:"",
+    vercel:"",
+    kaggle:"",
+    youtube:""
   },
+  
 };
 
 export const EDUCATION = [
@@ -32,28 +38,28 @@ export const EDUCATION = [
     status: "In Progress — 8th Semester",
     grade: "CGPA: 3.7",
     description:
-      "Currently in final year. Focus areas include software engineering, AI, and full-stack development.",
+      "Currently in final year. Focus areas include software engineering, Artificial Intelligent, and full-stack development.",
   },
   {
     id: "intermediate",
-    institution: "[Add in Admin — Institution Name]",
-    qualification: "Intermediate (FSc/ICS)",
-    field: "[Add in Admin]",
-    startDate: "[Add in Admin]",
-    endDate: "[Add in Admin]",
-    status: "[Add in Admin]",
-    grade: "[Add in Admin]",
+    institution: "Boys Degree College, Skardu",
+    qualification: "Intermediate (FSc)",
+    field: "ICS",
+    startDate: "01 Aug 2020",
+    endDate: "01 Aug 2022",
+    status: "Complete",
+    grade: "A",
     description: "[Add in Admin]",
   },
   {
     id: "matriculation",
-    institution: "[Add in Admin — Institution Name]",
+    institution: "Boys High School Kushmarah, Skardu",
     qualification: "Matriculation",
-    field: "[Add in Admin]",
-    startDate: "[Add in Admin]",
-    endDate: "[Add in Admin]",
-    status: "[Add in Admin]",
-    grade: "[Add in Admin]",
+    field: "Science",
+    startDate: "01 March 2008",
+    endDate: "30th July 2020",
+    status: "Completed",
+    grade: "B",
     description: "[Add in Admin]",
   },
 ];
