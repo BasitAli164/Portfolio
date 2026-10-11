@@ -3,14 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Download } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import {
   NAV_LINKS,
   PRIMARY_NAV_LINKS,
   SECONDARY_NAV_LINKS,
-  PROFILE,
 } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -172,12 +171,13 @@ export function Navbar() {
 
             <ThemeToggle />
 
+            {/* CV Download Button */}
             <a
               href="/cv.pdf"
-              download
+              download="Basit-Ali-CV.pdf"
               className="hidden items-center gap-2 rounded-md border border-border bg-surface px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground whitespace-nowrap transition-all hover:border-primary hover:bg-elevated sm:inline-flex"
             >
-              <span className="text-primary">$</span>
+              <Download className="h-3.5 w-3.5 text-primary" />
               <span>CV</span>
             </a>
 
@@ -227,11 +227,11 @@ export function Navbar() {
               <li className="mt-2 border-t border-border pt-4">
                 <a
                   href="/cv.pdf"
-                  download
+                  download="Basit-Ali-CV.pdf"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 rounded-md border border-border bg-surface px-4 py-2.5 font-mono text-xs uppercase tracking-[0.15em] text-foreground"
                 >
-                  <span className="text-primary">$</span>
+                  <Download className="h-3.5 w-3.5 text-primary" />
                   Download CV
                 </a>
               </li>
