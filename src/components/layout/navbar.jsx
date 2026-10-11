@@ -227,7 +227,7 @@ export function Navbar() {
               <li className="mt-2 border-t border-border pt-4">
                 <a
                   href="/cv.pdf"
-                  download="Basit-Ali-CV.pdf"
+                  download="cv.pdf"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 rounded-md border border-border bg-surface px-4 py-2.5 font-mono text-xs uppercase tracking-[0.15em] text-foreground"
                 >
