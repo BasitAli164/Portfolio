@@ -67,19 +67,23 @@ export const EDUCATION = [
 export const SKILLS = [
   {
     category: "Programming Languages",
-    items: ["JavaScript", "Python", "SQL"],
+    items: ["JavaScript", "Python","C++"],
   },
   {
     category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3"],
+    items: ["React Js", "Next.js", "Tailwind CSS","Bootstrap","Material UI","Shadcn", "HTML5", "CSS3"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs"],
+    items: ["Node.js", "Express.js", "REST APIs","Flask","Fast API",],
   },
   {
     category: "Databases",
-    items: ["MongoDB", "SQLite"],
+    items: ["MongoDB","SQL", "SQLite"],
+  },
+  {
+    category: "Artificial Intelligent",
+    items: ["Numpy", "Pandas", "Matplotelib","Seaborn","SckitLearn","Gradio","Streamlite"],
   },
   {
     category: "Generative AI & LLMs",
@@ -87,7 +91,9 @@ export const SKILLS = [
       "LLM Integration",
       "Prompt Engineering",
       "RAG",
+      "Fine Tune",
       "Hugging Face",
+      "API Key",
       "AI APIs",
     ],
   },
@@ -95,12 +101,29 @@ export const SKILLS = [
     category: "Tools & Platforms",
     items: [
       "Git",
+      "NPM",
+      "Pip",
       "GitHub",
+      "Postman",
+      "Compas",
       "Vercel",
       "Railway",
       "Cloudinary",
       "Google Colab",
-      "Gradio",
+      "Hugging Face",
+      "Kaggle",
+      "Streamlite Cloud",
+      
+    
+      
+    ],
+  },
+  {
+    category: "AI Tools & Platforms",
+    items: [
+      "ChatGPT","Claud","DeepSeek","Cursor","V0","Copolite","Grok"     
+    
+      
     ],
   },
 ];

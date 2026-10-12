@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Download } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -64,19 +65,25 @@ export function Navbar() {
     >
       <Container>
         <nav className="flex h-14 items-center justify-between gap-4">
+          {/* ─── Wordmark — Circular Logo Only ─── */}
           <Link
             href="/"
-            className="group flex shrink-0 items-baseline gap-2 whitespace-nowrap"
+            className="group flex shrink-0 items-center whitespace-nowrap"
             aria-label="Basit Ali — Home"
           >
-            <span className="font-serif text-2xl font-bold leading-none tracking-tight text-primary">
-              BA
-            </span>
-            <span className="hidden font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground transition-colors group-hover:text-foreground sm:inline">
-              / Basit Ali
-            </span>
+            <div className="relative h-9 w-9 overflow-hidden rounded-full border border-border bg-surface transition-all group-hover:border-primary group-hover:shadow-md">
+              <Image
+                src="/logo.png"
+                alt="Basit Ali"
+                fill
+                sizes="36px"
+                className="object-cover transition-transform group-hover:scale-105"
+                priority
+              />
+            </div>
           </Link>
 
+          {/* Desktop nav */}
           <ul className="hidden items-center gap-0.5 lg:flex">
             {PRIMARY_NAV_LINKS.map((link) => {
               const active = isActive(link.href);
@@ -161,6 +168,7 @@ export function Navbar() {
             )}
           </ul>
 
+          {/* Right actions */}
           <div className="flex shrink-0 items-center gap-2">
             <div className="hidden items-center gap-2 rounded-full border border-emerald-accent/30 bg-emerald-accent/5 px-2.5 py-1 2xl:flex">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-accent animate-pulse" />
@@ -198,6 +206,7 @@ export function Navbar() {
         </nav>
       </Container>
 
+      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="max-h-[calc(100vh-3.5rem)] overflow-y-auto border-t border-border bg-background lg:hidden">
           <Container>
@@ -227,7 +236,7 @@ export function Navbar() {
               <li className="mt-2 border-t border-border pt-4">
                 <a
                   href="/cv.pdf"
-                  download="cv.pdf"
+                  download="Basit-Ali-CV.pdf"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 rounded-md border border-border bg-surface px-4 py-2.5 font-mono text-xs uppercase tracking-[0.15em] text-foreground"
                 >

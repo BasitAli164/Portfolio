@@ -443,7 +443,7 @@ export function Hero() {
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
               Currently exploring LLM architectures, retrieval-augmented
               generation, and the craft of AI engineering. I work across the
-              full stack — from Next.js frontends to MongoDB backends — with a
+              full stack — from Next.js frontends to MongoDB & Node js/Express js backends — with a
               focus on research-grade reliability.
             </p>
 
