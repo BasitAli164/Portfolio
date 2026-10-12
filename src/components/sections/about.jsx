@@ -7,32 +7,32 @@ import Link from "next/link";
    ═══════════════════════════════════════════════════════════ */
 
 const CHAPTERS = [
-  {
-    number: "01",
-    icon: Terminal,
-    title: "The Beginning",
-    body: "My journey in tech began in Skardu, where access to technology was limited but curiosity wasn't. I taught myself to code from whatever resources I could find — and that self-taught foundation still shapes how I approach every problem today.",
-    accent: "primary",
-  },
+{
+  number: "01",
+  icon: Terminal,
+  title: "The Beginning",
+  body: "My journey into technology began in Skardu, where access to computers was limited but curiosity wasn't. During Intermediate (ICS), I was first introduced to programming fundamentals — mathematics, computer science, and statistics — and that early spark stayed with me. I taught myself to code using whatever resources I could find, and this self-taught foundation still shapes how I approach every problem today.",
+  accent: "primary",
+},
   {
     number: "02",
     icon: Code2,
     title: "Building Systems",
-    body: "Through my job at NetBots and internship at AKRSP, I've learned to ship real software — from database schema to deployed Project. I've worked on web applications involving debugging, testing, and the kind of deployment details that only show up in production.",
+    body: "I was selected for a competitive AKRSP-sponsored paid Web Development internship at NetBots (SMC-Private) Limited — a program designed to train and place students in real industry work. During the internship, I contributed to web application development, debugging, testing, and deployment. After completing the program, I was offered a Web Developer role at NetBots, where I continued contributing to production-grade software projects. This experience taught me how real teams ship software — from database schema to deployment details that only surface in production.",
     accent: "emerald-accent",
   },
   {
     number: "03",
     icon: Brain,
     title: "The AI Turn",
-    body: "My focus shifted toward Generative AI — not as a trend, but as a fundamental shift in how software will be built. I've worked with LLM APIs, prompt engineering, RAG architectures, and Hugging Face models. Hackathons like FortyGaurd and AI Factory  gave me the space to build fast and learn faster.",
+    body: "My interest shifted toward AI when I encountered the subject at the University of Baltistan — and realized that AI's backend is deeply rooted in mathematics and statistics. Mathematics has been my strongest subject since Matriculation, and my Intermediate (ICS) covered math, computer science, and statistics — the exact backbone of AI. Courses like Calculus and Multivariable Calculus further deepened my interest, since derivatives and optimization are central to how AI models learn. From there, I explored LLM APIs, prompt engineering, RAG architectures, and Hugging Face models — and international hackathons like AI Factory and FortyGuard gave me the space to build fast and learn faster with teams across time zones.",
     accent: "primary",
   },
   {
     number: "04",
     icon: Rocket,
     title: "What's Next",
-    body: "I'm pursuing postgraduate studies and research in AI engineering, LLM evaluation, and intelligent systems. My goal is to contribute to research that matters — and to keep building things that bridge academic rigor with real-world usefulness.",
+    body: "My next goal is postgraduate studies and research in AI and related fields — including Machine Learning, Deep Learning, Computer Vision, NLP, LLMs, and Foundation Models. These areas are, at their core, applied mathematics and statistics — which is exactly where my strengths and interests converge. My goal is to contribute to research that matters, and to keep building systems that bridge academic rigor with real-world usefulness.",
     accent: "emerald-accent",
   },
 ];
@@ -90,27 +90,41 @@ export function About() {
               <span className="float-left mr-3 font-serif text-7xl leading-[0.75] text-primary">
                 I
               </span>
-              &apos;m a final-year Computer Science student at the University of
-              Baltistan, Skardu — with experience in student leadership,
-              coordination, training, and teamwork that shaped how I approach
-              software engineering.
+              &apos;m an AI Engineer and Full-Stack Developer, currently in my
+              final year of BS Computer Science at the University of Baltistan,
+              Skardu — with a CGPA of 3.7.
             </p>
 
             <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Through my internship at NetBots, I contributed to web application
-              development, debugging, testing, and deployment. I&apos;ve also
-              collaborated with international teams in AI and software
-              development hackathons, building projects like{" "}
-              <span className="font-medium text-foreground">SignPulseAI</span>{" "}
-              and{" "}
-              <span className="font-medium text-foreground">HeatShield AI</span>.
+              My work sits at the intersection of AI engineering and full-stack
+              development. I build intelligent applications using{" "}
+              <span className="font-medium text-foreground">Python</span>,{" "}
+              <span className="font-medium text-foreground">JavaScript</span>,{" "}
+              <span className="font-medium text-foreground">TypeScript</span>,{" "}
+              <span className="font-medium text-foreground">Next.js</span>,{" "}
+              <span className="font-medium text-foreground">FastAPI</span>, and{" "}
+              <span className="font-medium text-foreground">Node.js</span>{" "}
+              — along with modern AI APIs like OpenAI, Gemini, and Groq. I&apos;ve
+              also deployed production-grade projects on Hugging Face,
+              Streamlit, Vercel, Railway, and Nginx.
             </p>
 
             <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              My current direction is clear: pursue postgraduate studies in AI
-              engineering, deepen my expertise in Generative AI and Large
-              Language Models, and participate in international research and
-              technology competitions.
+              Beyond development, I serve as an{" "}
+              <span className="font-medium text-foreground">AI Instructor</span>{" "}
+              at my university — teaching Generative AI, LLMs, prompt
+              engineering, and practical AI application development to
+              Computer Science students. I&apos;m also a published{" "}
+              <span className="font-medium text-foreground">IEEE co-author</span>{" "}
+              in software engineering and testing research, and an active
+              participant in international hackathons and technical
+              competitions.
+            </p>
+
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Currently, I&apos;m deepening my expertise in AI systems, LLMs,
+              and reliable intelligent software while preparing for graduate
+              research in AI and related fields.
             </p>
 
             {/* ─── Stats — inline pills ─── */}
@@ -198,11 +212,15 @@ export function About() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">-</span>
-                      <span>Building AI + Full-Stack systems</span>
+                      <span>AI Engineer &amp; Full-Stack Developer</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">-</span>
-                      <span>Preparing for grad studies</span>
+                      <span>AI Instructor @ UoBS</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">-</span>
+                      <span>Preparing for grad research</span>
                     </li>
                   </ul>
                 </div>
@@ -213,7 +231,7 @@ export function About() {
                     Focus Areas
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
-                    {["AI", "ML", "DL","NLP","CV","GenAI", "LLM",].map(
+                    {["AI", "ML", "DL", "NLP", "CV", "GenAI", "LLM"].map(
                       (item) => (
                         <span
                           key={item}
@@ -272,75 +290,75 @@ export function About() {
         {/* ═══════════════════════════════════════════════
             JOURNEY — 4 Chapter cards
             ═══════════════════════════════════════════════ */}
-        <div className="mt-20 lg:mt-24">
-          {/* Section label */}
-          <div className="flex items-center gap-3">
-            <span className="h-px w-10 bg-primary" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
-              The Journey · 04 Chapters
+       <div className="mt-20 lg:mt-24">
+  {/* Section label */}
+  <div className="flex items-center gap-3">
+    <span className="h-px w-10 bg-primary" />
+    <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
+      The Journey · 04 Chapters
+    </span>
+  </div>
+
+  <h3 className="mt-4 max-w-3xl font-serif text-3xl font-normal leading-tight tracking-tight text-foreground sm:text-4xl">
+    Four chapters that{" "}
+    <span className="italic text-primary">shaped</span> how I build.
+  </h3>
+
+  {/* Cards grid — 2x2 */}
+  <div className="mt-10 grid gap-5 sm:grid-cols-2">
+    {CHAPTERS.map((chapter) => {
+      const Icon = chapter.icon;
+      const isPrimary = chapter.accent === "primary";
+      return (
+        <div
+          key={chapter.number}
+          className="group relative flex min-h-[320px] flex-col overflow-hidden rounded-xl border border-border bg-surface p-6 transition-all hover:border-primary/40 hover:shadow-lg sm:p-7"
+        >
+          {/* Top row: number + icon */}
+          <div className="flex items-start justify-between">
+            <span
+              className={
+                isPrimary
+                  ? "font-mono text-[10px] uppercase tracking-[0.25em] text-primary"
+                  : "font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-accent"
+              }
+            >
+              Chapter {chapter.number}
+            </span>
+            <span
+              className={
+                isPrimary
+                  ? "inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-primary transition-colors group-hover:border-primary/40 group-hover:bg-primary/5"
+                  : "inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-emerald-accent transition-colors group-hover:border-emerald-accent/40 group-hover:bg-emerald-accent/5"
+              }
+            >
+              <Icon className="h-5 w-5" />
             </span>
           </div>
 
-          <h3 className="mt-4 max-w-3xl font-serif text-3xl font-normal leading-tight tracking-tight text-foreground sm:text-4xl">
-            Four chapters that{" "}
-            <span className="italic text-primary">shaped</span> how I build.
-          </h3>
+          {/* Title */}
+          <h4 className="mt-5 font-serif text-xl font-medium leading-tight text-foreground sm:text-2xl">
+            {chapter.title}
+          </h4>
 
-          {/* Cards grid */}
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {CHAPTERS.map((chapter) => {
-              const Icon = chapter.icon;
-              const isPrimary = chapter.accent === "primary";
-              return (
-                <div
-                  key={chapter.number}
-                  className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-surface p-5 transition-all hover:border-primary/40 hover:shadow-md"
-                >
-                  {/* Top row: number + icon */}
-                  <div className="flex items-start justify-between">
-                    <span
-                      className={
-                        isPrimary
-                          ? "font-mono text-[10px] uppercase tracking-[0.25em] text-primary"
-                          : "font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-accent"
-                      }
-                    >
-                      {chapter.number}
-                    </span>
-                    <span
-                      className={
-                        isPrimary
-                          ? "inline-flex h-8 w-8 items-center justify-center rounded-md border border-border bg-background text-primary transition-colors group-hover:border-primary/40"
-                          : "inline-flex h-8 w-8 items-center justify-center rounded-md border border-border bg-background text-emerald-accent transition-colors group-hover:border-emerald-accent/40"
-                      }
-                    >
-                      <Icon className="h-4 w-4" />
-                    </span>
-                  </div>
+          {/* Body */}
+          <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {chapter.body}
+          </p>
 
-                  {/* Title */}
-                  <h4 className="mt-4 font-serif text-lg font-medium leading-tight text-foreground">
-                    {chapter.title}
-                  </h4>
-
-                  {/* Body */}
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {chapter.body}
-                  </p>
-
-                  {/* Bottom accent line */}
-                  <div
-                    className={
-                      isPrimary
-                        ? "mt-4 h-px w-8 bg-primary transition-all group-hover:w-full"
-                        : "mt-4 h-px w-8 bg-emerald-accent transition-all group-hover:w-full"
-                    }
-                  />
-                </div>
-              );
-            })}
-          </div>
+          {/* Bottom accent line */}
+          <div
+            className={
+              isPrimary
+                ? "mt-6 h-px w-10 bg-primary transition-all group-hover:w-full"
+                : "mt-6 h-px w-10 bg-emerald-accent transition-all group-hover:w-full"
+            }
+          />
         </div>
+      );
+    })}
+  </div>
+</div>
       </Container>
     </section>
   );

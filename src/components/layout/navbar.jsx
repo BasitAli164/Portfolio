@@ -137,7 +137,7 @@ export function Navbar() {
                 </button>
 
                 {isMoreOpen && (
-                  <div className="absolute right-0 top-full mt-2 w-56 overflow-hidden rounded-lg border border-border bg-surface shadow-xl">
+                  <div className="absolute right-0 top-full mt-2 w-56 overflow-hidden rounded-lg border border-border bg-surface shadow-xl ">
                     <ul className="py-1.5">
                       {SECONDARY_NAV_LINKS.map((link) => {
                         const active = isActive(link.href);
@@ -183,10 +183,12 @@ export function Navbar() {
             <a
               href="/cv.pdf"
               download="Basit-Ali-CV.pdf"
+                title="Download Basit Ali's CV"
+إ
               className="hidden items-center gap-2 rounded-md border border-border bg-surface px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground whitespace-nowrap transition-all hover:border-primary hover:bg-elevated sm:inline-flex"
             >
-              <Download className="h-3.5 w-3.5 text-primary" />
-              <span>CV</span>
+              <Download className="h-6 w-3 text-primary" />
+              
             </a>
 
             <button

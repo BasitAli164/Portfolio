@@ -244,14 +244,18 @@ export function Education() {
 
                   <ul className="mt-3 space-y-2 border-l-2 border-primary/30 pl-4">
                     {[
+                      "Programming Fundamental",
+                      "Object Oriented Programming",
+                      "Digital Logic & Design",
+                      "Computer Organization & Assembly Language",
                       "Data Structures & Algorithms",
-                      "Database Systems",
+                      "Introduction to Database Systems",
                       "Operating Systems",
-                      "Software Engineering",
-                      "Artificial Intelligence",
-                      "Machine Learning",
-                      "Web Technologies",
                       "Computer Networks",
+                      "Artificial Intelligence",
+                      "Digital Image Processing",
+                      "Computer Vision"
+                      
                     ].map((course) => (
                       <li key={course} className="flex items-start gap-2">
                         <span className="text-emerald-accent">▸</span>
@@ -283,10 +287,18 @@ export function Education() {
                   {[
                     "Artificial Intelligence",
                     "Machine Learning",
+                    "Deeplearning",
+                    "Natural Language Processing",
+                    "Computer Vision",
+                    "Artificail Neural Netwok",
+                    "Digital Image Processing",
                     "Software Engineering",
                     "Web Development",
-                    "Database Systems",
-                    "Algorithms",
+                    "Data structure Algorithms",
+                    "Calculaus & Multivariable Calculus",
+                    "Linear Algebra",
+                    "Statistics & Probability",
+
                   ].map((tag) => (
                     <span
                       key={tag}

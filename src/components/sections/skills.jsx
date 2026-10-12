@@ -1,4 +1,15 @@
-import { Code2, Server, Database, Brain, Wrench, Rocket, Terminal } from "lucide-react";
+import {
+  Code2,
+  Server,
+  Database,
+  Brain,
+  Wrench,
+  Rocket,
+  Terminal,
+  Sparkles,
+  Layers,
+  Globe,
+} from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SKILLS } from "@/lib/constants";
 
@@ -9,11 +20,14 @@ import { SKILLS } from "@/lib/constants";
 // Icon + accent mapping per category
 const CATEGORY_META = {
   "Programming Languages": { icon: Code2, accent: "primary" },
-  "Frontend": { icon: Code2, accent: "primary" },
+  "Frontend": { icon: Layers, accent: "primary" },
   "Backend": { icon: Server, accent: "emerald-accent" },
   "Databases": { icon: Database, accent: "emerald-accent" },
-  "Generative AI & LLMs": { icon: Brain, accent: "primary" },
-  "Tools & Platforms": { icon: Wrench, accent: "emerald-accent" },
+  "AI & Machine Learning": { icon: Brain, accent: "primary" },
+  "Generative AI & LLMs": { icon: Sparkles, accent: "emerald-accent" },
+  "Deployment & Cloud": { icon: Rocket, accent: "primary" },
+  "Tools & IDEs": { icon: Wrench, accent: "emerald-accent" },
+  "Languages": { icon: Globe, accent: "primary" },
 };
 
 export function Skills() {
@@ -58,7 +72,7 @@ export function Skills() {
             MAIN LAYOUT — Skills terminal + categories
             ═══════════════════════════════════════════════ */}
         <div className="mt-16 grid gap-8 lg:mt-20 lg:grid-cols-12 lg:gap-8">
-          {/* ───── LEFT: Terminal `ls skills/` (5 cols) ───── */}
+          {/* ───── LEFT: Terminal `tree skills/` (5 cols) ───── */}
           <div className="lg:col-span-5">
             <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-lg lg:sticky lg:top-24">
               {/* Terminal title bar */}
@@ -125,7 +139,9 @@ export function Skills() {
                 <div className="mt-4 flex items-center gap-1.5 border-t border-border pt-3 text-muted-foreground">
                   <span className="text-primary">$</span>
                   <span className="inline-block h-3 w-1.5 animate-pulse bg-primary" />
-                  <span className="ml-2 opacity-60">// 6 categories, 30+ tools</span>
+                  <span className="ml-2 opacity-60">
+                    // 9 categories, 80+ tools
+                  </span>
                 </div>
               </div>
             </div>
@@ -233,26 +249,26 @@ export function Skills() {
             {[
               {
                 icon: Rocket,
-                title: "Full-Stack Web",
-                desc: "End-to-end apps with Next.js, Node.js, and MongoDB — from schema design to deployed UI.",
+                title: "Full-Stack Development",
+                desc: "End-to-end web apps with Next.js, Node.js, Express, MongoDB — from schema design to deployed UI on Vercel and Railway.",
                 accent: "primary",
               },
               {
                 icon: Brain,
-                title: "Generative AI",
-                desc: "LLM integration, prompt engineering, and AI-powered feature development.",
+                title: "AI & Machine Learning",
+                desc: "Building ML pipelines with Python, NumPy, Pandas, and Scikit-learn — from data processing to model evaluation.",
                 accent: "emerald-accent",
               },
               {
-                icon: Terminal,
-                title: "RAG Systems",
-                desc: "Retrieval-augmented generation pipelines with embeddings and vector search.",
+                icon: Sparkles,
+                title: "Generative AI & LLMs",
+                desc: "LLM integration, prompt engineering, RAG systems, AI agents, and applications using OpenAI, Gemini, and Groq APIs.",
                 accent: "primary",
               },
               {
                 icon: Server,
-                title: "APIs & Backend",
-                desc: "RESTful APIs, authentication, and database architecture for production apps.",
+                title: "APIs & Deployment",
+                desc: "RESTful APIs with FastAPI and Flask, containerization, and production deployment on Hugging Face, Streamlit Cloud, and Nginx.",
                 accent: "emerald-accent",
               },
             ].map((cap) => {

@@ -1,19 +1,10 @@
-/**
- * Projects Data
- * 
- * Central place for project information.
- * In later phases, this will move to MongoDB.
- * 
- * Fields marked [ADD IN ADMIN] are placeholders.
- */
-
 export const PROJECTS = [
   {
     id: "smindruk",
     number: "01",
     title: "Smindruk",
     subtitle: "AI-Based Dataset-Driven Digital Marketing Server",
-    category: "AI & Marketing",
+    category: "Web App",
     categoryColor: "primary",
     featured: true,
     status: "In Progress",
@@ -25,9 +16,9 @@ export const PROJECTS = [
       "Building the full backend architecture — API design, database schema, and AI-powered trend analysis pipeline.",
     description:
       "Centralized social media management platform with trend analysis, campaign suggestions, and AI-assisted content generation.",
-    technologies: ["Next.js", "Express js","Node.js", "MongoDB", "LLM APIs"],
-    github: "[ADD IN ADMIN]",
-    demo: "[ADD IN ADMIN]",
+    technologies: ["Next.js", "Node.js", "MongoDB", "LLM APIs"],
+    github: "https://github.com/BasitAli164",
+    demo: "https://smindruk.vercel.app/",
     accent: "primary",
   },
   {
@@ -38,70 +29,246 @@ export const PROJECTS = [
     category: "Hackathon",
     categoryColor: "emerald-accent",
     featured: true,
-    status: "Hackathon Project",
+    status: "Completed",
     year: "2025",
     isFYP: false,
     problem:
       "Communities lack accessible, hyperlocal heat-risk forecasts to prepare for extreme temperatures.",
     contribution:
-      "Worked on the AI agent that converts raw temperature data into actionable risk levels and 6–12 hour forecasts.",
+      "Worked on the AI agent that converts raw temperature data into actionable risk levels and 6–12 hour forecasts. Collaborated with international team at FortyGuard Hackathon 2026.",
     description:
       "AI-powered system that predicts local heat risks and generates actionable guidance for vulnerable populations.",
     technologies: ["Python", "FastAPI", "Streamlit", "AI Agents"],
-    github: "[ADD IN ADMIN]",
-    demo: "[ADD IN ADMIN]",
+    github: "https://github.com/BasitAli164/HeatShield-AI",
+    demo: "https://heat-shield-ai-dusky.vercel.app",
     accent: "emerald-accent",
   },
   {
     id: "signpulse",
     number: "03",
-    title: "SignPulseAI",
+    title: "SignPlusAI",
     subtitle: "Sign Language Recognition System",
-    category: "Computer Vision",
+    category: "Hackathon",
     categoryColor: "primary",
     featured: true,
-    status: "Hackathon Project",
+    status: "Completed",
     year: "2025",
     isFYP: false,
     problem:
       "Communication barriers between sign language users and non-signers in everyday contexts.",
     contribution:
-      "Contributed to model pipeline and real-time inference interface.",
+      "Contributed to model pipeline and real-time inference interface. Collaborated with international team at AI Factory Hackathon.",
     description:
       "AI system that recognizes sign language gestures in real-time and translates them into text.",
     technologies: ["Python", "TensorFlow", "OpenCV", "Streamlit"],
-    github: "[ADD IN ADMIN]",
-    demo: "[ADD IN ADMIN]",
+    github: "https://github.com/BasitAli164/SignPlusAI",
+    demo: "https://sign-plus-ai.vercel.app",
     accent: "primary",
   },
   {
-    id: "socialpost",
+    id: "ai-career-audit",
     number: "04",
-    title: "SocialPost AI",
-    subtitle: "AI-Powered Social Media Content Generator",
+    title: "AI Career Audit",
+    subtitle: "AI-Powered Resume & GitHub Analyzer",
+    category: "Generative AI",
+    categoryColor: "emerald-accent",
+    featured: true,
+    status: "Completed",
+    year: "2026",
+    isFYP: false,
+    problem:
+      "Students don't get honest feedback on their resumes and GitHub profiles before applying to jobs.",
+    contribution:
+      "Built full-stack Next.js app with Gemini API integration, PDF parsing, and GitHub profile analysis.",
+    description:
+      "AI-powered career audit that analyzes resumes and GitHub profiles like a FAANG recruiter — providing honest feedback, missing skills, suggested projects, and a 30-day roadmap.",
+    technologies: ["Next.js", "Gemini API", "Octokit", "Tailwind CSS"],
+    github: "https://github.com/BasitAli164/ai-career-audit",
+    demo: "https://ai-career-audit-33qt-lac.vercel.app",
+    accent: "emerald-accent",
+  },
+  {
+    id: "metatest",
+    number: "05",
+    title: "MetaTest",
+    subtitle: "Software Testing Research Frontend",
+    category: "Web App",
+    categoryColor: "primary",
+    featured: true,
+    status: "Completed",
+    year: "2026",
+    isFYP: false,
+    problem:
+      "Software testing research needs a UI to demonstrate metamorphic relations dynamically.",
+    contribution:
+      "Built the frontend with dynamic MR types and dropdown UI. Related to IEEE C-CODE 2025 research.",
+    description:
+      "Frontend for metamorphic testing research — dynamically generates and demonstrates metamorphic relation types for software testing education and research.",
+    technologies: ["React", "Next.js", "Tailwind CSS"],
+    github: "https://github.com/BasitAli164/metatest-frontend",
+    demo: "https://metatest-frontend.vercel.app",
+    accent: "primary",
+  },
+  {
+    id: "bart-summarizer",
+    number: "06",
+    title: "BART Summarizer",
+    subtitle: "Fine-tuned Text Summarization Model",
+    category: "Generative AI",
+    categoryColor: "primary",
+    featured: false,
+    status: "Live",
+    year: "2026",
+    isFYP: false,
+    problem:
+      "Summarizing long text automatically with transformer models.",
+    contribution:
+      "Fine-tuned a BART model for abstractive summarization and published it on Hugging Face.",
+    description:
+      "Fine-tuned BART model for abstractive text summarization. Available for use with the Transformers library.",
+    technologies: ["Python", "Transformers", "Hugging Face"],
+    github: "https://github.com/BasitAli164",
+    demo: "https://huggingface.co/BasitAliii/bart_finetuned_model",
+    accent: "primary",
+  },
+  {
+    id: "sentiment-analysis",
+    number: "07",
+    title: "Sentiment Analysis",
+    subtitle: "Rule-Based NLP Classifier",
     category: "Generative AI",
     categoryColor: "emerald-accent",
     featured: false,
-    status: "Completed",
-    year: "2024",
+    status: "Live",
+    year: "2026",
     isFYP: false,
     problem:
-      "Creating consistent, on-brand social media content takes time most creators don't have.",
+      "Understanding text sentiment without heavy ML infrastructure.",
     contribution:
-      "Designed the UI and integrated LLM APIs for content generation.",
+      "Built and deployed a rule-based sentiment analysis tool as a Hugging Face Space.",
     description:
-      "Web app that generates platform-specific social media posts from a short prompt.",
-    technologies: ["Next.js", "OpenAI API", "Tailwind"],
-    github: "[ADD IN ADMIN]",
-    demo: "[ADD IN ADMIN]",
+      "Deployed Hugging Face Space for sentiment analysis using rule-based NLP techniques. Publicly accessible for real-time text classification.",
+    technologies: ["Python", "Hugging Face Spaces", "NLP"],
+    github: "https://github.com/BasitAli164",
+    demo: "https://huggingface.co/spaces/BasitAliii/Sentiment_Analysis_Rule_Base",
+    accent: "emerald-accent",
+  },
+  {
+    id: "uobs-hods-insight",
+    number: "08",
+    title: "UoBS HODs Insight",
+    subtitle: "University Department Analytics Dashboard",
+    category: "Generative AI",
+    categoryColor: "primary",
+    featured: false,
+    status: "Live",
+    year: "2025",
+    isFYP: false,
+    problem:
+      "Centralized insights about University of Baltistan department heads.",
+    contribution:
+      "Built and deployed an insight dashboard as a Hugging Face Space.",
+    description:
+      "A data dashboard providing insights into University of Baltistan department heads and their academic profiles.",
+    technologies: ["Python", "Streamlit", "Hugging Face Spaces"],
+    github: "https://github.com/BasitAli164",
+    demo: "https://huggingface.co/spaces/BasitAliii/Uobs_HODs_Insight",
+    accent: "primary",
+  },
+  {
+    id: "student-face-dataset",
+    number: "09",
+    title: "Student Face Dataset",
+    subtitle: "Computer Vision Dataset",
+    category: "Dataset",
+    categoryColor: "emerald-accent",
+    featured: false,
+    status: "Live",
+    year: "2026",
+    isFYP: false,
+    problem:
+      "No public dataset of student faces for face recognition research in local context.",
+    contribution:
+      "Curated and published a dataset of 18 students with 10-20 images each, with metadata for face recognition tasks.",
+    description:
+      "A dataset of 18 students' images with metadata for face recognition and classification research. Published on Hugging Face.",
+    technologies: ["Python", "Hugging Face Datasets", "Computer Vision"],
+    github: "https://github.com/BasitAli164",
+    demo: "https://huggingface.co/datasets/BasitAliii/student_face_dataset",
+    accent: "emerald-accent",
+  },
+  {
+    id: "sdlc-dataset",
+    number: "10",
+    title: "SDLC Scenario QA Dataset",
+    subtitle: "Software Engineering Q&A Dataset",
+    category: "Dataset",
+    categoryColor: "primary",
+    featured: false,
+    status: "Live",
+    year: "2026",
+    isFYP: false,
+    problem:
+      "Lack of structured QA datasets for software development lifecycle education.",
+    contribution:
+      "Created a scenario-based question-answer dataset for SDLC concepts.",
+    description:
+      "A question-answer dataset covering Software Development Life Cycle scenarios. Published on Hugging Face.",
+    technologies: ["Python", "Hugging Face Datasets", "NLP"],
+    github: "https://github.com/BasitAli164",
+    demo: "https://huggingface.co/datasets/BasitAliii/sdlc-scenario-based-qa-dataset",
+    accent: "primary",
+  },
+  {
+    id: "snooker-frontend",
+    number: "11",
+    title: "Snooker Web Game",
+    subtitle: "Browser-Based Snooker Game",
+    category: "Web App",
+    categoryColor: "primary",
+    featured: false,
+    status: "Live",
+    year: "2025",
+    isFYP: false,
+    problem:
+      "Building an interactive physics-based game in the browser.",
+    contribution:
+      "Built a snooker game with physics simulation and interactive controls.",
+    description:
+      "A browser-based snooker game with realistic physics, built for learning game development and physics simulation.",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Physics Simulation"],
+    github: "https://github.com/BasitAli164/snookerFrontendProject",
+    demo: "https://snooker-frontend-project.vercel.app",
+    accent: "primary",
+  },
+  {
+    id: "tourism-dashboard",
+    number: "12",
+    title: "Tourism Dashboard",
+    subtitle: "Tourism Analytics & Insights",
+    category: "Web App",
+    categoryColor: "emerald-accent",
+    featured: false,
+    status: "Live",
+    year: "2025",
+    isFYP: false,
+    problem:
+      "Visualizing tourism data for better insights and decision-making.",
+    contribution:
+      "Built a tourism analytics dashboard with interactive visualizations.",
+    description:
+      "An analytics dashboard for tourism data — showcasing visualizations, trends, and insights for the tourism sector.",
+    technologies: ["JavaScript", "Data Visualization", "REST APIs"],
+    github: "https://github.com/BasitAli164/tourism-dashboard",
+    demo: "https://tourism-dashboard-vkvq.vercel.app",
     accent: "emerald-accent",
   },
 ];
 
 export const PROJECT_CATEGORIES = [
-  "All",
-  "AI & Marketing",
+  "All",  
   "Hackathon",
-  "Computer Vision",
   "Generative AI",
+  "Web App",
+  "Dataset",
 ];

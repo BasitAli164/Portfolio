@@ -1,7 +1,12 @@
+import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PROFILE, NAV_LINKS } from "@/lib/constants";
 
+/* ═══════════════════════════════════════════════════════════
+   Social & Platform Icons — Custom SVGs
+   (Lucide-react removed brand icons)
+   ═══════════════════════════════════════════════════════════ */
 function GithubIcon({ className }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -18,11 +23,79 @@ function LinkedinIcon({ className }) {
   );
 }
 
+function HuggingFaceIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-3.5 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm7 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm-3.5 6.5c-1.5 0-2.8.7-3.5 1.8-.2.3 0 .7.4.7h6.2c.4 0 .6-.4.4-.7-.7-1.1-2-1.8-3.5-1.8Z" />
+    </svg>
+  );
+}
+
+function GoogleScholarIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+    </svg>
+  );
+}
+
+function StreamlitIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2 4 6v12l8 4 8-4V6l-8-4zm-4.5 13.5v-3l4.5-2.25 4.5 2.25v3l-4.5 2.25-4.5-2.25z" />
+    </svg>
+  );
+}
+
+function KaggleIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.275.179.039.122.02.234-.06.336l-6.555 6.645 6.947 8.535c.078.1.097.213.062.336z" />
+    </svg>
+  );
+}
+
+function VercelIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2 22 20H2L12 2z" />
+    </svg>
+  );
+}
+
+function YoutubeIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  );
+}
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
   const featuredLinks = NAV_LINKS.filter((link) =>
-    ["/education", "/skills", "/hackathons", "/teaching","/experience","/achievements","/problem-solving"].includes(link.href)
+    [
+      
+      "/hackathons",
+      "/teaching",
+      "/experience",
+      "/achievements",
+      "/problem-solving",
+    ].includes(link.href)
   );
+
+  // Social links — only rendered if URL exists
+  const socialLinks = [
+    { id: "github", label: "GitHub", href: PROFILE.social.github, icon: GithubIcon, handle: "/BasitAli164" },
+    { id: "linkedin", label: "LinkedIn", href: PROFILE.social.linkedin, icon: LinkedinIcon, handle: "/in/basit-ali-abdupa" },
+    { id: "huggingface", label: "Hugging Face", href: PROFILE.social.huggingface, icon: HuggingFaceIcon, handle: "/BasitAliii" },
+    { id: "googleScholar", label: "Google Scholar", href: PROFILE.social.googleScholar, icon: GoogleScholarIcon, handle: "Publications" },
+    { id: "streamlit", label: "Streamlit", href: PROFILE.social.streamlit, icon: StreamlitIcon, handle: "Live AI demos" },
+    { id: "kaggle", label: "Kaggle", href: PROFILE.social.kaggle, icon: KaggleIcon, handle: "ML notebooks" },
+    { id: "vercel", label: "Vercel", href: PROFILE.social.vercel, icon: VercelIcon, handle: "Deployed apps" },
+    { id: "youtube", label: "YouTube", href: PROFILE.social.youtube, icon: YoutubeIcon, handle: "GenAI lectures" },
+  ].filter((s) => s.href && s.href.length > 0); // only show links with URLs
 
   return (
     <footer className="relative overflow-hidden border-t border-border bg-surface">
@@ -38,13 +111,12 @@ export function Footer() {
       />
 
       <Container className="py-12 sm:py-16">
-        {/* ─── Top: Colophon header ─── */}
-       
+        
 
-        {/* ─── Main grid: 3 columns ─── */}
+        {/* ─── Main grid ─── */}
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-8">
-          {/* Col 1: Brand — 5 cols */}
-          <div className="lg:col-span-5">
+          {/* Col 1: Brand — 4 cols */}
+          <div className="lg:col-span-4">
             <div className="flex items-baseline gap-2">
               <span className="font-serif text-3xl font-bold leading-none tracking-tight text-primary">
                 BA
@@ -79,7 +151,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {featuredLinks.map((link, index) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="group inline-flex items-baseline gap-2 text-sm text-foreground transition-colors hover:text-primary"
                   >
@@ -89,62 +161,56 @@ export function Footer() {
                     <span className="transition-transform group-hover:translate-x-0.5">
                       {link.label}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3: Connect — 4 cols */}
-          <div className="lg:col-span-4">
+          {/* Col 3: Connect — 5 cols */}
+          <div className="lg:col-span-5">
             <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
               Connect
             </h3>
-            <ul className="mt-4 space-y-3">
-              <li>
-                <a
-                  href={PROFILE.social.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 text-sm text-foreground transition-colors hover:text-primary"
-                >
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-border bg-background transition-colors group-hover:border-primary">
-                    <GithubIcon className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="font-mono text-xs">/basitali</span>
-                  <span className="ml-auto text-muted-foreground transition-transform group-hover:translate-x-0.5">
-                    →
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={PROFILE.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 text-sm text-foreground transition-colors hover:text-primary"
-                >
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-border bg-background transition-colors group-hover:border-primary">
-                    <LinkedinIcon className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="font-mono text-xs">/in/basitali</span>
-                  <span className="ml-auto text-muted-foreground transition-transform group-hover:translate-x-0.5">
-                    →
-                  </span>
-                </a>
-              </li>
+
+            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {socialLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <li key={link.id}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm text-foreground transition-colors hover:bg-elevated hover:text-primary"
+                    >
+                      <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-border bg-background transition-colors group-hover:border-primary">
+                        <Icon className="h-3 w-3" />
+                      </span>
+                      <span className="min-w-0 flex-1 truncate font-mono text-[11px]">
+                        {link.label}
+                      </span>
+                      <span className="text-muted-foreground transition-transform group-hover:translate-x-0.5">
+                        →
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+
+              {/* Email — always shown */}
               <li>
                 <a
                   href={`mailto:${PROFILE.email}`}
-                  className="group flex items-center gap-3 text-sm text-foreground transition-colors hover:text-primary"
+                  className="group flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm text-foreground transition-colors hover:bg-elevated hover:text-primary"
                 >
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-border bg-background font-mono text-xs transition-colors group-hover:border-primary">
+                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-border bg-background font-mono text-[11px] transition-colors group-hover:border-primary">
                     @
                   </span>
-                  <span className="truncate font-mono text-xs">
-                    basitdeveloper911
+                  <span className="min-w-0 flex-1 truncate font-mono text-[11px]">
+                    Email
                   </span>
-                  <span className="ml-auto text-muted-foreground transition-transform group-hover:translate-x-0.5">
+                  <span className="text-muted-foreground transition-transform group-hover:translate-x-0.5">
                     →
                   </span>
                 </a>
@@ -159,17 +225,17 @@ export function Footer() {
             <span>
               © {currentYear} {PROFILE.name}
             </span>
+            
+          </div>
+          <div>
             <span className="hidden h-3 w-px bg-border sm:inline-block" />
             <span>All rights reserved</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span className="hidden sm:inline">
-              Built with Next.js · Tailwind · MongoDB
-            </span>
-            <span className="hidden h-3 w-px bg-border md:inline-block" />
-            <span className="hidden md:inline">35.2971°N, 75.6333°E</span>
+            <span className="hidden sm:inline">Built with Next.js</span>
             
+           
           </div>
         </div>
       </Container>

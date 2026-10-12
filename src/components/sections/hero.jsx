@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, FileText, Sparkles } from "lucide-react";
+import { ArrowUpRight, FileText, Sparkles,ArrowUp } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PROFILE, EDUCATION, SKILLS } from "@/lib/constants";
 import { PROJECTS } from "@/lib/projects-data";
@@ -272,11 +272,7 @@ export function Hero() {
         </div>
 
         <Container className="relative py-8 sm:py-10 lg:py-12">
-          {/* TOP STRIP */}
-          <div className="flex items-center justify-between border-b border-border pb-3 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:text-[11px]">
-            <span className="hidden sm:inline">Chapter I — Introduction</span>
-            <span>№ 01</span>
-          </div>
+         
 
           {/* MASSIVE SERIF NAME — CENTERED */}
           <div className="relative mt-10 text-center sm:mt-14 lg:mt-16">
@@ -578,10 +574,10 @@ export function Hero() {
 
           {/* ═══ Magazine-style chapter previews ═══ */}
           <div className="mt-20 space-y-20 sm:space-y-24 lg:space-y-28">
-            {/* CHAPTER II — About */}
+            {/* CHAPTER I — About */}
             <ChapterPreview
-              chapter="Chapter II"
-              number="02"
+              chapter="Chapter I"
+              number="01"
               label="About"
               href="/about"
               accent="primary"
@@ -608,10 +604,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER III — Education */}
+            {/* CHAPTER II — Education */}
             <ChapterPreview
-              chapter="Chapter III"
-              number="03"
+              chapter="Chapter II"
+              number="02"
               label="Education"
               href="/education"
               accent="emerald-accent"
@@ -643,10 +639,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER IV — Skills */}
+            {/* CHAPTER III — Skills */}
             <ChapterPreview
-              chapter="Chapter IV"
-              number="04"
+              chapter="Chapter III"
+              number="03"
               label="Skills"
               href="/skills"
               accent="primary"
@@ -675,10 +671,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER V — Projects */}
+            {/* CHAPTER IV — Projects */}
             <ChapterPreview
-              chapter="Chapter V"
-              number="05"
+              chapter="Chapter IV"
+              number="04"
               label="Projects"
               href="/projects"
               accent="emerald-accent"
@@ -714,10 +710,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER VI — Research */}
+            {/* CHAPTER V — Research */}
             <ChapterPreview
-              chapter="Chapter VI"
-              number="06"
+              chapter="Chapter V"
+              number="05"
               label="Research"
               href="/research"
               accent="primary"
@@ -745,10 +741,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER VII — Hackathons */}
+            {/* CHAPTER VI — Hackathons */}
             <ChapterPreview
-              chapter="Chapter VII"
-              number="07"
+              chapter="Chapter VI"
+              number="06"
               label="Hackathons"
               href="/hackathons"
               accent="emerald-accent"
@@ -783,10 +779,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER VIII — Problem Solving */}
+            {/* CHAPTER VII — Problem Solving */}
             <ChapterPreview
-              chapter="Chapter VIII"
-              number="08"
+              chapter="Chapter VII"
+              number="07"
               label="Problem Solving"
               href="/problem-solving"
               accent="primary"
@@ -810,10 +806,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER IX — Teaching */}
+            {/* CHAPTER VIII — Teaching */}
             <ChapterPreview
-              chapter="Chapter IX"
-              number="09"
+              chapter="Chapter VIII"
+              number="08"
               label="Teaching"
               href="/teaching"
               accent="emerald-accent"
@@ -840,10 +836,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER X — Experience */}
+            {/* CHAPTER IX — Experience */}
             <ChapterPreview
-              chapter="Chapter X"
-              number="10"
+              chapter="Chapter IX"
+              number="09"
               label="Experience"
               href="/experience"
               accent="primary"
@@ -870,10 +866,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER XI — Achievements */}
+            {/* CHAPTER X — Achievements */}
             <ChapterPreview
-              chapter="Chapter XI"
-              number="11"
+              chapter="Chapter X"
+              number="10"
               label="Achievements"
               href="/achievements"
               accent="emerald-accent"
@@ -900,10 +896,10 @@ export function Hero() {
               </div>
             </ChapterPreview>
 
-            {/* CHAPTER XII — Contact */}
+            {/* CHAPTER XI — Contact */}
             <ChapterPreview
-              chapter="Chapter XII"
-              number="12"
+              chapter="Chapter XI"
+              number="11"
               label="Contact"
               href="/contact"
               accent="primary"
@@ -929,14 +925,16 @@ export function Hero() {
           {/* Bottom strip */}
           <div className="mt-20 flex items-center justify-between border-t border-border pt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:mt-24">
             <span>End of Home</span>
-            <span className="hidden sm:inline">12 chapters · full portfolio</span>
+            
+            
             <a
-              href="/"
-              className="flex items-center gap-2 transition-colors hover:text-foreground"
-            >
-              Back to top
-              <span className="inline-block animate-bounce">↑</span>
-            </a>
+                          href="#home"
+                          aria-label="Back to top"
+                          className="group ml-auto inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1.5 text-foreground transition-colors hover:border-primary hover:text-primary"
+                        >
+                          <span>Back to Top ↑</span>
+                          <ArrowUp className="h-3 w-3 transition-transform group-hover:-translate-y-0.5" />
+                        </a>
           </div>
         </Container>
       </section>

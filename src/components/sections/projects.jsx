@@ -1,7 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, FolderGit2, ExternalLink, Sparkles, Star } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { PROJECTS } from "@/lib/projects-data";
+import { PROJECTS, PROJECT_CATEGORIES } from "@/lib/projects-data";
 
 /* ═══════════════════════════════════════════════════════════
    Projects Section — Editorial / Terminal aesthetic
@@ -16,8 +19,16 @@ function GithubIcon({ className }) {
 }
 
 export function Projects() {
-  const featured = PROJECTS.filter((p) => p.featured);
-  const others = PROJECTS.filter((p) => !p.featured);
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  // Filter projects based on active category
+  const filteredProjects =
+    activeCategory === "All"
+      ? PROJECTS
+      : PROJECTS.filter((p) => p.category === activeCategory);
+
+  const featured = filteredProjects.filter((p) => p.featured);
+  const others = filteredProjects.filter((p) => !p.featured);
 
   return (
     <section
@@ -57,7 +68,7 @@ export function Projects() {
         </div>
 
         {/* ═══════════════════════════════════════════════
-            FILTER BAR — Terminal style
+            FILTER BAR — Terminal style (WORKING)
             ═══════════════════════════════════════════════ */}
         <div className="mt-12 flex flex-wrap items-center gap-2 rounded-lg border border-border bg-surface p-3 sm:p-4">
           <div className="flex items-center gap-2 pr-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -65,45 +76,71 @@ export function Projects() {
             <span>filter --by</span>
           </div>
           <div className="flex flex-wrap gap-1.5">
-            {["All", "AI & Marketing", "Hackathon", "Computer Vision", "Generative AI"].map(
-              (cat, i) => (
-                <span
+            {PROJECT_CATEGORIES.map((cat) => {
+              const isActive = activeCategory === cat;
+              return (
+                <button
                   key={cat}
+                  type="button"
+                  onClick={() => setActiveCategory(cat)}
                   className={
-                    i === 0
-                      ? "rounded-full border border-primary bg-primary/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-primary"
+                    isActive
+                      ? "rounded-full border border-primary bg-primary/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-primary transition-all"
                       : "rounded-full border border-border bg-background px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
                   }
                 >
                   {cat}
-                </span>
-              )
-            )}
+                </button>
+              );
+            })}
           </div>
           <div className="ml-auto font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            {PROJECTS.length} results
+            {filteredProjects.length} results
           </div>
         </div>
 
         {/* ═══════════════════════════════════════════════
+            EMPTY STATE — No projects match filter
+            ═══════════════════════════════════════════════ */}
+        {filteredProjects.length === 0 && (
+          <div className="mt-16 flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-surface/50 py-20 text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background">
+              <FolderGit2 className="h-5 w-5 text-muted-foreground" />
+            </div>
+            <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              No projects in this category
+            </p>
+            <button
+              type="button"
+              onClick={() => setActiveCategory("All")}
+              className="mt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:text-primary/80"
+            >
+              Clear filter →
+            </button>
+          </div>
+        )}
+
+        {/* ═══════════════════════════════════════════════
             FEATURED PROJECTS — Large cards
             ═══════════════════════════════════════════════ */}
-        <div className="mt-10">
-          {/* Section label */}
-          <div className="flex items-center gap-3">
-            <Star className="h-3 w-3 text-primary" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
-              Featured · {String(featured.length).padStart(2, "0")}
-            </span>
-            <span className="h-px flex-1 bg-border" />
-          </div>
+        {featured.length > 0 && (
+          <div className="mt-10">
+            {/* Section label */}
+            <div className="flex items-center gap-3">
+              <Star className="h-3 w-3 text-primary" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
+                Featured · {String(featured.length).padStart(2, "0")}
+              </span>
+              <span className="h-px flex-1 bg-border" />
+            </div>
 
-          <div className="mt-6 grid gap-6 lg:grid-cols-2">
-            {featured.map((project) => (
-              <ProjectCard key={project.id} project={project} large />
-            ))}
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              {featured.map((project) => (
+                <ProjectCard key={project.id} project={project} large />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* ═══════════════════════════════════════════════
             OTHER PROJECTS — Compact cards
