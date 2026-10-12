@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, FileText, Sparkles,ArrowUp } from "lucide-react";
+import { ArrowUpRight, FileText, Sparkles, ArrowUp } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PROFILE, EDUCATION, SKILLS } from "@/lib/constants";
 import { PROJECTS } from "@/lib/projects-data";
-import { RESEARCH_INTERESTS } from "@/lib/research-data";
+import { AREAS_OF_INTEREST } from "@/lib/research-data";
 import { HACKATHONS } from "@/lib/hackathons-data";
 import { PROBLEM_ACTIVITIES } from "@/lib/problem-solving-data";
 import { TEACHING_EXPERIENCES } from "@/lib/teaching-data";
@@ -247,7 +247,7 @@ function ChapterPreview({ chapter, number, label, title, href, accent = "primary
 export function Hero() {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
   const topSkills = SKILLS.slice(0, 4);
-  const topInterests = RESEARCH_INTERESTS.slice(0, 4);
+  const topAreas = AREAS_OF_INTEREST.slice(0, 4);
   const topHackathons = HACKATHONS.slice(0, 3);
   const topAchievements = ACHIEVEMENTS.slice(0, 3);
 
@@ -272,8 +272,6 @@ export function Hero() {
         </div>
 
         <Container className="relative py-8 sm:py-10 lg:py-12">
-         
-
           {/* MASSIVE SERIF NAME — CENTERED */}
           <div className="relative mt-10 text-center sm:mt-14 lg:mt-16">
             <div className="flex items-center justify-start gap-3">
@@ -285,7 +283,7 @@ export function Hero() {
 
             <h1 className="mt-4 font-serif text-[3.5rem] font-normal leading-[0.82] tracking-[-0.03em] text-foreground sm:text-[5.5rem] lg:text-[8rem] xl:text-[9.5rem]">
               <span className="block">Basit</span>
-              <span className="block mt-3">
+              <span className="mt-3 block">
                 <span className="text-primary italic">Ali</span>
                 <span className="text-emerald-accent">.</span>
               </span>
@@ -439,7 +437,7 @@ export function Hero() {
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
               Currently exploring LLM architectures, retrieval-augmented
               generation, and the craft of AI engineering. I work across the
-              full stack — from Next.js frontends to MongoDB & Node js/Express js backends — with a
+              full stack — from Next.js frontends to MongoDB &amp; Node.js/Express.js backends — with a
               focus on research-grade reliability.
             </p>
 
@@ -682,7 +680,8 @@ export function Hero() {
             >
               <div className="grid gap-4 sm:grid-cols-3">
                 {featuredProjects.map((project) => (
-                  <div                    key={project.id}
+                  <div
+                    key={project.id}
                     className="group/card relative flex flex-col overflow-hidden rounded-lg border border-border bg-surface p-5 transition-all hover:border-emerald-accent/40 hover:shadow-md"
                   >
                     <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-accent">
@@ -720,22 +719,22 @@ export function Hero() {
               title="Asking questions worth answering — with rigor."
             >
               <div className="flex flex-wrap gap-2">
-                {topInterests.map((interest, i) => (
+                {topAreas.map((area, i) => (
                   <span
-                    key={interest.number}
+                    key={area}
                     className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 transition-colors hover:border-primary/40"
                   >
                     <span className="font-mono text-[10px] uppercase tracking-wider text-primary">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="font-mono text-xs text-foreground">
-                      {interest.title}
+                      {area}
                     </span>
                   </span>
                 ))}
                 <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/5 px-4 py-2">
                   <span className="font-mono text-xs text-primary">
-                    +{RESEARCH_INTERESTS.length - 4} more
+                    +{AREAS_OF_INTEREST.length - 4} more
                   </span>
                 </span>
               </div>
@@ -925,16 +924,15 @@ export function Hero() {
           {/* Bottom strip */}
           <div className="mt-20 flex items-center justify-between border-t border-border pt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:mt-24">
             <span>End of Home</span>
-            
-            
+
             <a
-                          href="#home"
-                          aria-label="Back to top"
-                          className="group ml-auto inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1.5 text-foreground transition-colors hover:border-primary hover:text-primary"
-                        >
-                          <span>Back to Top ↑</span>
-                          <ArrowUp className="h-3 w-3 transition-transform group-hover:-translate-y-0.5" />
-                        </a>
+              href="#home"
+              aria-label="Back to top"
+              className="group ml-auto inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1.5 text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="h-3 w-3 transition-transform group-hover:-translate-y-0.5" />
+            </a>
           </div>
         </Container>
       </section>

@@ -428,65 +428,7 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Terminal info panel */}
-            <div className="mt-6 overflow-hidden rounded-lg border border-border bg-surface shadow-lg">
-              <div className="flex items-center justify-between border-b border-border px-3 py-2">
-                <div className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-destructive/70" />
-                  <span className="h-2 w-2 rounded-full bg-yellow-500/70" />
-                  <span className="h-2 w-2 rounded-full bg-emerald-accent/70" />
-                </div>
-                <span className="font-mono text-[10px] tracking-wider text-muted-foreground">
-                  contact_info.json
-                </span>
-                <span className="font-mono text-[9px] uppercase text-muted-foreground">
-                  read-only
-                </span>
-              </div>
-              <div className="p-4 font-mono text-[11px] leading-relaxed">
-                <pre>
-                  <code>
-                    <span className="text-muted-foreground">{"{"}</span>
-                    {"\n  "}
-                    <span className="text-primary">&quot;preferred&quot;</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-emerald-accent">
-                      &quot;email&quot;
-                    </span>
-                    <span className="text-muted-foreground">,</span>
-                    {"\n  "}
-                    <span className="text-primary">&quot;response&quot;</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-emerald-accent">
-                      &quot;&lt;24h&quot;
-                    </span>
-                    <span className="text-muted-foreground">,</span>
-                    {"\n  "}
-                    <span className="text-primary">&quot;openTo&quot;</span>
-                    <span className="text-muted-foreground">: [</span>
-                    {"\n    "}
-                    <span className="text-emerald-accent">
-                      &quot;research&quot;
-                    </span>
-                    <span className="text-muted-foreground">,</span>
-                    {"\n    "}
-                    <span className="text-emerald-accent">
-                      &quot;internships&quot;
-                    </span>
-                    <span className="text-muted-foreground">,</span>
-                    {"\n    "}
-                    <span className="text-emerald-accent">
-                      &quot;freelance&quot;
-                    </span>
-                    {"\n  "}
-                    <span className="text-muted-foreground">]</span>
-                    {"\n"}
-                    <span className="text-muted-foreground">{"}"}</span>
-                  </code>
-                </pre>
-              </div>
-            </div>
-          </div>
+                      </div>
         </div>
       </Container>
     </section>
