@@ -337,14 +337,14 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="mt-6 text-center lg:text-left">
+              {/* <div className="mt-6 text-center lg:text-left">
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   Fig. 01
                 </p>
                 <p className="mt-1 font-serif text-sm italic text-foreground">
                   Portrait of the author — Skardu, 2026
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Terminal JSON (7 cols) */}
@@ -369,47 +369,53 @@ export function Hero() {
                   <code>
                     <span className="text-muted-foreground">{"{"}</span>
                     {"\n  "}
+                    {"\n  "}
                     <span className="text-primary">&quot;name&quot;</span>
                     <span className="text-muted-foreground">: </span>
                     <span className="text-emerald-accent">&quot;Basit Ali&quot;</span>
                     <span className="text-muted-foreground">,</span>
                     {"\n  "}
+                    <span className="text-primary">&quot;address&quot;</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-emerald-accent">&quot;Kushmarah Gond, Skardu&quot;</span>
+                    <span className="text-muted-foreground">,</span>
+                    {"\n  "}
+                    <span className="text-primary">&quot;Contact&quot;</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-emerald-accent">&quot;+92 3475495500&quot;</span>
+                    <span className="text-muted-foreground">,</span>
+                    {"\n  "}
                     <span className="text-primary">&quot;role&quot;</span>
                     <span className="text-muted-foreground">: </span>
                     <span className="text-emerald-accent">
-                      &quot;AI Engineer&quot;
+                      &quot;Full Stack Developer & AI Engineer&quot;
                     </span>
                     <span className="text-muted-foreground">,</span>
+                    
                     {"\n  "}
-                    <span className="text-primary">&quot;focus&quot;</span>
-                    <span className="text-muted-foreground">: [</span>
-                    <span className="text-emerald-accent">&quot;GenAI&quot;</span>
-                    <span className="text-muted-foreground">, </span>
-                    <span className="text-emerald-accent">&quot;LLMs&quot;</span>
-                    <span className="text-muted-foreground">, </span>
-                    <span className="text-emerald-accent">&quot;RAG&quot;</span>
-                    <span className="text-muted-foreground">],</span>
-                    {"\n  "}
-                    <span className="text-primary">&quot;stack&quot;</span>
-                    <span className="text-muted-foreground">: [</span>
-                    <span className="text-emerald-accent">&quot;Next.js&quot;</span>
-                    <span className="text-muted-foreground">, </span>
-                    <span className="text-emerald-accent">&quot;Node&quot;</span>
-                    <span className="text-muted-foreground">, </span>
-                    <span className="text-emerald-accent">&quot;MongoDB&quot;</span>
-                    <span className="text-muted-foreground">],</span>
-                    {"\n  "}
-                    <span className="text-primary">&quot;graduating&quot;</span>
+                    <span className="text-primary">&quot;Education&quot;</span>
                     <span className="text-muted-foreground">: </span>
                     <span className="text-emerald-accent">
-                      &quot;Jan 2027&quot;
+                      &quot; BS Computer Science &quot;
+                    </span>
+                      {"\n  "}
+                    <span className="text-primary">&quot;univeristy&quot;</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-emerald-accent">
+                      &quot;University of Baltistan, Skardu&quot;
                     </span>
                     <span className="text-muted-foreground">,</span>
                     {"\n  "}
-                    <span className="text-primary">&quot;open&quot;</span>
+                    <span className="text-primary">&quot;status&quot;</span>
                     <span className="text-muted-foreground">: </span>
-                    <span className="text-emerald-accent">true</span>
-                    {"\n"}
+                    <span className="text-emerald-accent">
+                      &quot;Graduated&quot;
+                    </span>
+                    {"\n  "}
+                    {"\n  "}
+                  
+                  
+                    
                     <span className="text-muted-foreground">{"}"}</span>
                   </code>
                 </pre>
@@ -429,16 +435,13 @@ export function Hero() {
               <span className="float-left mr-3 font-serif text-7xl leading-[0.75] text-primary">
                 I
               </span>
-              &apos;m a final-year Computer Science student at the University of
-              Baltistan, Skardu — building systems where modern web engineering
-              meets the frontier of Generative AI.
+              &apos;m a Computer Science graduate from the University of Baltistan, Skardu, specializing in Full-Stack Development and AI Engineering.
             </p>
 
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              Currently exploring LLM architectures, retrieval-augmented
-              generation, and the craft of AI engineering. I work across the
-              full stack — from Next.js frontends to MongoDB &amp; Node.js/Express.js backends — with a
-              focus on research-grade reliability.
+               Build modern applications using MERN and Next.js, and develop AI solutions spanning data processing, model training, and API integration. 
+               With professional development experience, an internship, and participate in international Hackathons
+               
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -521,7 +524,11 @@ export function Hero() {
                   </span>
                   <span className="text-foreground">
                     <TypingText
-                      text="Generative AI, LLMs, RAG systems — plus full-stack apps with Next.js, Node.js, and MongoDB. Currently open to research collaborations, internships, and graduate opportunities."
+                      text="Ali builds full-stack web applications, from frontend and backend development to API integration, deployment, and client handover. 
+                      He works with Next.js and the MERN stack to create static and dynamic websites, as well as desktop applications using Electron.js.
+                      He also develops Generative AI applications, including chatbots and LLM-powered tools, integrates models, and builds solutions that connect
+                      trained models with practical web interfaces. Beyond development, he participates in international hackathons and coding competitions and 
+                      collaborates on AI research and academic publications."
                       delay={600}
                     />
                   </span>

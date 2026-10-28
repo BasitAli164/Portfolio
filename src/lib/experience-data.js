@@ -11,12 +11,12 @@
 
 export const EXPERIENCES = [
   {
-    id: "netbots-internship",
+    id: "akrsp-internship",
     number: "01",
     type: "Internship",
     typeColor: "primary",
     role: "Web Development Intern",
-    company: "NetBots",
+    company: "AKRSP",
     companyNote: "AKRSP-sponsored competitive opportunity",
     location: "[ADD IN ADMIN — city/remote]",
     startDate: "[ADD IN ADMIN — month/year]",

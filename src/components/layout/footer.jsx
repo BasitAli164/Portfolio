@@ -170,7 +170,7 @@ export function Footer() {
           {/* Col 3: Connect — 5 cols */}
           <div className="lg:col-span-5">
             <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              Connect
+              Digital Profiles
             </h3>
 
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
