@@ -64,7 +64,6 @@ export const PUBLICATIONS = [
       "Journal of Engineering and Computational Intelligence Review (JECIR)",
     venueShort: "JECIR · Vol. 4, Issue 2",
     year: "2026",
-    pages: "139–155",
     type: "Journal Article",
     status: "Published",
     statusColor: "emerald-accent",
@@ -74,10 +73,10 @@ export const PUBLICATIONS = [
       "This study examines robotized precision farming in olive oil production by integrating spatial data analytics and artificial intelligence (AI). The approach combines soil organic matter (OM), Normalized Difference Vegetation Index (NDVI), yield measurements, and geographic coordinates using spatial clustering, variogram analysis, Random Forest regression, and multivariate spatial analysis. Key findings: (1) spatial clustering defined three management zones despite poor OM prediction from sensor variables (R² ≈ 0), with zone-based management ~90% effective; (2) linear regression revealed an unexpectedly weak correlation between OM and olive yield (r = 0.072), redirecting optimization toward other controllable variables; and (3) robotized agricultural solutions with AI-enhanced spatial analytics provide a powerful closed-loop model for precision olive orchard management. The work advances Agriculture 5.0 by enabling smart, autonomous, and sustainable Mediterranean olive oil production.",
     contribution:
       "Co-author (3rd position). Led the data analysis and visualization — using Python libraries (Pandas, NumPy, Matplotlib, Seaborn) in Google Colab to produce the statistical and graphical results for the paper. Also contributed to the literature review and overall research writing. Delivered analytical outputs and visualizations to the research team for integration into the final manuscript.",
-    doi: null,
-    doiDisplay: null,
-    paperUrl: null,
-    pdfUrl: null,
+    doi: "https://doi.org/10.63544/zh5bf906",
+    doiDisplay: "https://doi.org/10.63544/zh5bf906",
+    paperUrl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yn1wHesAAAAJ&citation_for_view=yn1wHesAAAAJ:9c2xU6iGI7YC",
+    pdfUrl: "https://drive.google.com/file/d/1WGnsh6Tjl2EVKgT-26LUeK0GMUvckYPX/view?usp=sharing",
     license: "CC BY-NC-SA",
     accent: "primary",
   },
@@ -110,7 +109,7 @@ export const RESEARCH_PROJECTS = [
       "Descriptive statistics with transparent denominators",
       "Optional NLP/ML classifier if sufficient labelled data is available",
     ],
-    status: "Proposal Stage",
+    status: "Proposal Submitted",
     statusColor: "yellow",
     area: "Computational Dream Research · NLP · Health Text Analysis",
     collaborators: "In collaboration with a health researcher (MBBS)",
@@ -134,21 +133,5 @@ export const RESEARCH_PROJECTS = [
     area: "Applied AI · Marketing Analytics",
     accent: "emerald-accent",
   },
-  {
-    id: "llm-optimization",
-    number: "03",
-    title: "LLM Optimization Techniques",
-    subtitle:
-      "Exploring faster LLM inference for real-time user interactions",
-    description:
-      "Exploring optimization methods for faster LLM inference — including Adam optimizer, gradient descent variants, and heuristic approaches for real-time user interactions.",
-    contribution:
-      "Independent exploration — reading literature and experimenting with optimization techniques for LLM inference.",
-    technologies: ["Python", "PyTorch", "Optimization", "LLM Systems"],
-    workflow: [],
-    status: "Exploration",
-    statusColor: "primary",
-    area: "LLM Systems · Optimization",
-    accent: "primary",
-  },
+ 
 ];
