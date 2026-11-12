@@ -7,17 +7,17 @@ export const PROJECTS = [
     category: "Web App",
     categoryColor: "primary",
     featured: true,
-    status: "In Progress",
+    status: "Completed",
     year: "2025–2026",
     isFYP: true,
     problem:
       "Small businesses struggle to run data-driven marketing campaigns without expensive tools or analytics expertise.",
     contribution:
-      "Building the full backend architecture — API design, database schema, and AI-powered trend analysis pipeline.",
+      "Building the full backend architecture — API design, database schema, and AI-Content Generation pipeline for post.",
     description:
-      "Centralized social media management platform with trend analysis, campaign suggestions, and AI-assisted content generation.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "LLM APIs"],
-    github: "https://github.com/BasitAli164",
+      "Centralized social media management platform with content distribution, bluk post, and AI-assisted content generation.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Grok APIs"],
+    github: "https://github.com/FAMEHyder/SminDruk",
     demo: "https://smindruk.vercel.app/",
     accent: "primary",
   },
@@ -30,7 +30,7 @@ export const PROJECTS = [
     categoryColor: "emerald-accent",
     featured: true,
     status: "Completed",
-    year: "2025",
+    year: "2026",
     isFYP: false,
     problem:
       "Communities lack accessible, hyperlocal heat-risk forecasts to prepare for extreme temperatures.",
@@ -52,12 +52,12 @@ export const PROJECTS = [
     categoryColor: "primary",
     featured: true,
     status: "Completed",
-    year: "2025",
+    year: "2026",
     isFYP: false,
     problem:
       "Communication barriers between sign language users and non-signers in everyday contexts.",
     contribution:
-      "Contributed to model pipeline and real-time inference interface. Collaborated with international team at AI Factory Hackathon.",
+      "Contributed to real-time inference interface. Collaborated with international team at AI Factory Hackathon.",
     description:
       "AI system that recognizes sign language gestures in real-time and translates them into text.",
     technologies: ["Python", "TensorFlow", "OpenCV", "Streamlit"],
@@ -88,30 +88,8 @@ export const PROJECTS = [
     accent: "emerald-accent",
   },
   {
-    id: "metatest",
-    number: "05",
-    title: "MetaTest",
-    subtitle: "Software Testing Research Frontend",
-    category: "Web App",
-    categoryColor: "primary",
-    featured: true,
-    status: "Completed",
-    year: "2026",
-    isFYP: false,
-    problem:
-      "Software testing research needs a UI to demonstrate metamorphic relations dynamically.",
-    contribution:
-      "Built the frontend with dynamic MR types and dropdown UI. Related to IEEE C-CODE 2025 research.",
-    description:
-      "Frontend for metamorphic testing research — dynamically generates and demonstrates metamorphic relation types for software testing education and research.",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
-    github: "https://github.com/BasitAli164/metatest-frontend",
-    demo: "https://metatest-frontend.vercel.app",
-    accent: "primary",
-  },
-  {
     id: "bart-summarizer",
-    number: "06",
+    number: "05",
     title: "BART Summarizer",
     subtitle: "Fine-tuned Text Summarization Model",
     category: "Generative AI",
@@ -133,7 +111,7 @@ export const PROJECTS = [
   },
   {
     id: "sentiment-analysis",
-    number: "07",
+    number: "06",
     title: "Sentiment Analysis",
     subtitle: "Rule-Based NLP Classifier",
     category: "Generative AI",

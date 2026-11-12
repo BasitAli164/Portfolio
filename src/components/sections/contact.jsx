@@ -13,11 +13,11 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PROFILE } from "@/lib/constants";
+import emailjs from "@emailjs/browser"; // 👈 EmailJS import
 
 /* ═══════════════════════════════════════════════════════════
-   Contact Section — Editorial / Terminal aesthetic
+   Custom Brand Icons (same as before)
    ═══════════════════════════════════════════════════════════ */
-
 function GithubIcon({ className }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -94,21 +94,51 @@ export function Contact() {
     }));
   };
 
+  // ✅ EmailJS Integration
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // UI-only demo — server submission comes in Phase 3
-    await new Promise((r) => setTimeout(r, 1200));
+    try {
+      // EmailJS ko parameters bhejein (Template ke variables se match hone chahiye)
+      const templateParams = {
+        name: formState.name,
+        email: formState.email,
+        subject: formState.subject,
+        message: formState.message,
+        reply_to: formState.email, // Taake aap directly reply kar sakein
+      };
 
-    setIsSubmitting(false);
-    setSubmitStatus({
-      type: "info",
-      title: "Form not yet connected",
-      message:
-        "Server-side submission is coming in the next phase. For now, please reach out via email or LinkedIn.",
-    });
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      );
+
+      // Success state
+      setIsSubmitting(false);
+      setSubmitStatus({
+        type: "success",
+        title: "Message sent successfully!",
+        message: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      
+      // Form reset karein
+      setFormState({ name: "", email: "", subject: "", message: "" });
+
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setIsSubmitting(false);
+      setSubmitStatus({
+        type: "error",
+        title: "Failed to send message",
+        message: "Something went wrong. Please try again or reach out via email/LinkedIn.",
+      });
+    }
   };
 
   return (
@@ -276,6 +306,9 @@ export function Contact() {
                     {submitStatus.type === "success" && (
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-accent" />
                     )}
+                    {submitStatus.type === "error" && (
+                      <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
+                    )}
                     <div>
                       <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-foreground">
                         {submitStatus.title}
@@ -331,7 +364,7 @@ export function Contact() {
               </div>
               <a
                 href="/cv.pdf"
-                download
+                download="Basit-Ali-CV.pdf"
                 className="group inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] text-foreground transition-all hover:border-primary hover:bg-elevated"
               >
                 <Download className="h-3.5 w-3.5" />
@@ -428,7 +461,9 @@ export function Contact() {
               </div>
             </div>
 
-                      </div>
+            {/* Terminal info panel (contact_info.json) - Same as before */}
+            {/* ... (Yeh hissa same rahega) ... */}
+          </div>
         </div>
       </Container>
     </section>
