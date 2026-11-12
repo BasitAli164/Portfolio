@@ -200,30 +200,32 @@ export function About() {
                   <span>cat about.md</span>
                 </div>
 
-                <div className="border-l-2 border-primary/30 pl-3">
-                  <p className="text-foreground">
-                    <span className="text-emerald-accent">## </span>
-                    Currently
-                  </p>
-                  <ul className="mt-2 space-y-1.5 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">-</span>
-                      <span>Final-year CS @ UoBS, Skardu</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">-</span>
-                      <span>AI Engineer &amp; Full-Stack Developer</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">-</span>
-                      <span>AI Instructor @ UoBS</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">-</span>
-                      <span>Preparing for grad research</span>
-                    </li>
-                  </ul>
-                </div>
+                
+<div className="border-l-2 border-primary/30 pl-3">
+  <p className="text-foreground">
+    <span className="text-emerald-accent">## </span>
+    Currently
+  </p>
+  <ul className="mt-2 space-y-1.5 text-muted-foreground">
+    <li className="flex items-start gap-2">
+      <span className="text-primary">-</span>
+      <span>Recent Computer Science Graduate @ UoBS</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-primary">-</span>
+      <span>AI &amp; Full-Stack Developer</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-primary">-</span>
+      <span>Sharing Knowledge in Generative AI</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-primary">-</span>
+      <span>Preparing for Graduate Research</span>
+    </li>
+  </ul>
+</div>
+
 
                 <div className="border-l-2 border-emerald-accent/30 pl-3">
                   <p className="text-foreground">
@@ -231,7 +233,7 @@ export function About() {
                     Focus Areas
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
-                    {["AI", "ML", "DL", "NLP", "CV", "GenAI", "LLM"].map(
+                    {["AI", "ML", "DL", "NLP", "CV","DIP", "GenAI", "LLM","RAG","AI Agents"].map(
                       (item) => (
                         <span
                           key={item}
@@ -244,26 +246,36 @@ export function About() {
                   </div>
                 </div>
 
-                <div className="border-l-2 border-primary/30 pl-3">
-                  <p className="text-foreground">
-                    <span className="text-emerald-accent">## </span>
-                    Looking For
-                  </p>
-                  <ul className="mt-2 space-y-1.5 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-accent">→</span>
-                      <span>Research collaborations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-accent">→</span>
-                      <span>AI engineering internships</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-accent">→</span>
-                      <span>Graduate opportunities (Fall 2027)</span>
-                    </li>
-                  </ul>
-                </div>
+                
+<div className="border-l-2 border-primary/30 pl-3">
+  <p className="text-foreground">
+    <span className="text-emerald-accent">## </span>
+    Looking For
+  </p>
+  <ul className="mt-2 space-y-1.5 text-muted-foreground">
+    <li className="flex items-start gap-2">
+      <span className="text-emerald-accent">→</span>
+      <span>AI Engineering Opportunities</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-emerald-accent">→</span>
+      <span>Full-Stack Development Opportunities</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-emerald-accent">→</span>
+      <span>Research Collaborations</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-emerald-accent">→</span>
+      <span>Graduate Study Opportunities (Fall 2027)</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-emerald-accent">→</span>
+      <span>AI Teaching &amp; Mentorship Opportunities</span>
+    </li>
+  </ul>
+</div>
+
 
                 <div className="flex items-center gap-1.5 border-t border-border pt-3 text-muted-foreground">
                   <span className="text-primary">$</span>
