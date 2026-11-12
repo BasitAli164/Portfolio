@@ -32,7 +32,7 @@ const CHAPTERS = [
     number: "04",
     icon: Rocket,
     title: "What's Next",
-    body: "My next goal is postgraduate studies and research in AI and related fields — including Machine Learning, Deep Learning, Computer Vision, NLP, LLMs, and Foundation Models. These areas are, at their core, applied mathematics and statistics — which is exactly where my strengths and interests converge. My goal is to contribute to research that matters, and to keep building systems that bridge academic rigor with real-world usefulness.",
+    body: "I am currently seeking opportunities in AI Engineering and Full-Stack Web Development, where I can apply my technical skills, contribute to real-world projects, and grow as a software professional. Looking ahead, my long-term goal is to pursue postgraduate studies and research in AI and related fields, including Machine Learning, Deep Learning, Computer Vision, NLP, LLMs, and Foundation Models. These fields are deeply rooted in applied mathematics and statistics, areas that align closely with my academic strengths and interests. Ultimately, I aspire to contribute to meaningful research and develop intelligent systems that bridge academic rigor with practical, real-world applications.",
     accent: "emerald-accent",
   },
 ];
@@ -41,7 +41,7 @@ const STATS = [
   { label: "CGPA", value: "3.7", accent: "primary" },
   { label: "Projects", value: "6+", accent: "emerald-accent" },
   { label: "Hackathons", value: "5+", accent: "primary" },
-  { label: "Years Coding", value: "4+", accent: "emerald-accent" },
+  { label: "Years Coding", value: "3+", accent: "emerald-accent" },
 ];
 
 export function About() {
